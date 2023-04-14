@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
       res.render('index');
 
       console.log(`Total tasks: ${tasks.length}   Current tasks: ${currentTasks.length}    Completed tasks:  ${completedTasks.length}`)
-      res.render('index', { currentTasks: currentTasks, completedTasks: completedTasks });
+      res.render('heyyyyy', 'index', { currentTasks: currentTasks, completedTasks: completedTasks });
     })
     .catch((err) => {
       console.log(err);

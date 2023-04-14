@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
       const currentTasks = tasks.filter(task => !task.completed);
       const completedTasks = tasks.filter(task => task.completed === true);
 
-      console.log('heyyy');
+      console.log('heyyy')
 
       console.log(`Total tasks: ${tasks.length}   Current tasks: ${currentTasks.length}    Completed tasks:  ${completedTasks.length}`)
       res.render('index', { currentTasks: currentTasks, completedTasks: completedTasks });
@@ -31,6 +31,7 @@ router.post('/addTask', function(req, res, next) {
     createDate: createDate
   });
   console.log(`Adding a new task ${taskName} - createDate ${createDate}`)
+  console.log('heyyy')
 
   task.save()
       .then(() => { 
